@@ -1,0 +1,294 @@
+@import '../../node_modules/open-color/open-color.css';
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+
+
+}
+
+/**
+** navbarbrand
+ */
+
+.navbar-brand{
+    color: var(--oc-blue-9)!important;
+    font-weight: 600;
+
+
+}
+
+/**
+Text color
+*/
+
+
+.navbar-dark {
+    color: var(--oc-gray-5);
+
+}
+
+
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--oc-gray-5);
+}
+
+
+.navbar-dark .navbar-nav .nav-link.disabled {
+    color: var(--oc-gray-5);
+}
+
+
+
+.navbar-dark .navbar-toggler {
+    color: var(--oc-gray-5);
+
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-dark .navbar-text {
+    color: var(--oc-gray-5);
+}
+
+.navbar-dark .navbar-text a {
+    color: var(--oc-gray-5);
+}
+
+.navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
+    color: var(--oc-gray-9);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+    color: var(--oc-gray-9);
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--oc-blue-8);
+    border-bottom: solid var(--oc-blue-8);
+
+}
+
+.navbar-dark .navbar-nav .nav-link.active:hover {
+    color: var(--oc-blue-5);
+    border-bottom: solid var(--oc-blue-5);
+
+}
+
+/**
+*  Image
+ */
+
+@media screen and (max-width: 991px){
+    .nav-item svg{
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 991px){
+    /* Utiliser des images en svg pour les émoticones de menu */
+    svg{
+        fill: var(--oc-gray-5) !important;
+        height: 1rem;
+    }
+    .nav-link.active:hover svg,
+    .active > .nav-link:hover svg{
+        fill: var(--oc-blue-5)!important;
+    }
+
+    .nav-link.active svg{
+        fill: var(--oc-blue-8) !important;
+
+    }
+
+    .nav-link:hover svg,
+    .dropdown:hover svg {
+        fill: var(--oc-gray-9) !important;
+
+    }
+
+    .dropdown:hover .active svg,
+    .nav-link:hover .active svg{
+        fill: var(--oc-blue-8) !important;
+
+    }
+
+
+}
+
+
+/**
+*  Positionnement
+*/
+
+.navbar-nav{
+    float: left;
+}
+
+.navbar{
+    background-color: #FFF !important;
+
+}
+
+.navbar .nav-link {
+    font-weight: 500;
+
+}
+
+
+/**
+* Navbad Toggler
+*/
+
+.navbar-dark .navbar-toggler {
+    background-color: #FFF;
+    border-color: rgba(0, 0, 0, 0.1);
+
+}
+
+.navbar-dark .navbar-toggler-icon {
+
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/**
+* Title
+*/
+
+.box {
+    color: var(--oc-gray-9);
+    font-weight: 500;
+    font-family: "Avenir Next", Avenir, Merriweather ,sans-serif ;
+    margin: 1.5rem;
+    font-size: 1.5rem;
+}
+
+@media all{
+
+    .logo{
+        height: 50px;
+        width: 50px;
+        opacity: 1;
+    }
+}
+
+/**
+* Body
+*/
+
+.content {
+    flex: 1;
+}
+
+.content {
+    float:right;
+}
+
+
+/*
+ * Footer
+ */
+.my-footer {
+
+    color: #999;
+    text-align: left;
+    padding-left: 5rem;
+    background-color: #f9f9f9;
+    border-top: .05rem solid #e5e5e5;
+
+}
+
+
+
+.fixFooter{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*
+* Admin
+ */
+
+.retour svg{
+    height: 2rem;
+    fill: black!important;
+
+}
+
+.retour{
+    border: var(--oc-gray-4) solid 1px;
+    border-radius: .5rem;
+    margin: 1rem;
+
+}
+
+
+/**
+* Utilisateur
+ */
+.nav-user{
+    color: black !important;
+    border-radius: 1rem;
+    border: var(--oc-orange-5) solid .125rem;
+}
+
+.nav-user svg{
+    fill: black !important;
+}
+
+.disabled svg{
+    fill: black !important;
+}
+
+.nav-logout svg{
+    fill: black !important;
+}
+
+
+/**
+* Fix navbar height
+ */
+
+.navbar{
+    width: 100%;
+
+}
+.container{
+    max-width: 100%;
+    margin-right: 3rem;
+}
+
+
+/**
+* Buttun
+ */
+
+.btn-scd {
+    color: #FFF;
+    background-color: rgba(0, 37, 77,.8);
+
+    border-radius: .2rem;
+
+}
+
+.btn-scd:hover {
+    color: rgba(0, 37, 77,.8);
+    background-color: #F1F8FF;
+    border-color:rgba(0, 37, 77,.8);
+    border-radius: .2rem;
+
+}
+
+.btn-scd:focus, .btn-scd.focus {
+    box-shadow: 0 0 0 0rem rgba(0, 54, 109, 0.5);
+}
+
+.btn-right{
+    margin: 0.5rem;
+}

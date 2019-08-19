@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent()}} - Connexion{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('security') }}
+{% endblock %}
+
+
+{% block fixFooter %}
+
+    {% block body %}
+        <form method="post" class="form-signin">
+            {% if error %}
+                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+
+            <div class="text-center mb-4">
+                <img class="mb-4" src="{{ asset('build/images/logo.png') }}" alt="" width="72" height="72">
+                <h1 class="h3 mb-3 font-weight-normal">Connexion</h1>
+                <p>
+                    Connectez-vous à la plateforme de gestion des jours fériés de la SCACentre.
+                </p>
+            </div>
+
+            <div class="form-label-group">
+                <label for="inputEmail" class="sr-only">Email</label>
+                <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+            </div>
+
+            <div class="form-label-group">
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            </div>
+
+            <input type="hidden" name="_csrf_token"
+                   value="{{ csrf_token('authenticate') }}">
+
+            {#
+                Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                See https://symfony.com/doc/current/security/remember_me.html
+
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" name="_remember_me"> Remember me
+                    </label>
+                </div>
+            #}
+
+            <button class="btn btn-lg btn-primary" type="submit">
+                Connexion
+            </button>
+        </form>
+    {% endblock body %}
+
+    {% block javascripts %}
+        {{ parent() }}
+        {{ encore_entry_script_tags('security') }}
+    {% endblock %}
+
+{% endblock fixFooter %}

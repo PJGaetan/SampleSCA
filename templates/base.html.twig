@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Un exemple pour créer une application Symfony 4 - SCACentre rapidement.">
+    <meta name="author" content="Gaëtan Pierre-Justin">
+
+    <title>{% block title %}SCACentre{% endblock %}</title>
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('build/images/favicon.ico') }}" />
+
+    {% block stylesheets %}
+
+        <!-- Bootstrap core CSS -->
+        {{ encore_entry_link_tags('app') }}
+
+    {% endblock %}
+
+</head>
+
+<body>
+{% block fixFooter %}
+    <div class="fixFooter">
+
+        {% block header %}
+        {% endblock  header%}
+
+
+        <div class="content">
+            {% block body %}
+            {% endblock body%}
+        </div>
+
+        {% block footer %}
+            <footer class="my-footer">
+
+                <p>Copyright &copy;
+                    <a id="output1"></a>
+                    <script type="text/javascript">
+                        var d = new Date();
+                        document.getElementById('output1').innerHTML = d.getFullYear();
+                    </script>
+                    Gaëtan Pierre-Justin</p>
+            </footer>
+        {% endblock footer%}
+    </div>
+    {% block javascripts %}
+
+        {{ encore_entry_script_tags('app') }}
+
+    {% endblock javascripts %}
+
+{% endblock fixFooter%}
+</body>
+</html>

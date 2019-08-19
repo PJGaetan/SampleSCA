@@ -1,0 +1,13 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ parent() }} - Example{% endblock %}
+
+
+{% block titre %}
+{{ parent() }} - Index
+{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+    Salut tu es {{ app.user.email }}
+{% endblock %}
